@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76ca8f8a-bf49-4929-9473-71144951e4f1" name="Default" comment="" />
+    <list default="true" id="76ca8f8a-bf49-4929-9473-71144951e4f1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="SampleAPIsForAndroidIOSIntegration.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -600,12 +602,12 @@
       <option name="presentableId" value="Default" />
       <updated>1461561845863</updated>
       <workItem from="1461561847380" duration="6212000" />
-      <workItem from="1461572587348" duration="3477000" />
+      <workItem from="1461572587348" duration="3544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9689000" />
+    <option name="totallyTimeSpent" value="9756000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="57" y="24" width="1309" height="744" extended-state="6" />
