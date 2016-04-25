@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+	debug="false">
+
+	<!-- Rolling file Appender -->
+	<appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}/logs/server.log" />
+		<param name="Append" value="true" />
+		<param name="Threshold" value="DEBUG" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<param name="Threshold" value="DEBUG" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="ASYNC" class="org.apache.log4j.AsyncAppender">
+		<param name="BufferSize" value="500" />
+		<appender-ref ref="FILE" />
+	</appender>
+
+	<!-- our service -->
+	<logger name="com.payeasy"/>
+	<!-- <logger name="com.app" level="INFO" /> --><!-- to follow if setup is being executed -->
+
+
+	<logger name="org.jboss.resteasy">
+		<level value="OFF" />
+		<appender-ref ref="FILE" />
+	</logger>
+	<root>
+		<!-- appender-ref ref="CONSOLE" / -->
+		<priority value="debug"></priority>
+		<appender-ref ref="ASYNC" />
+	</root>
+
+</log4j:configuration>
